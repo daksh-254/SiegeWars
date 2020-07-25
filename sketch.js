@@ -55,8 +55,8 @@ function setup() {
     block21 = new Block(600, 130, 30, 30);     
 
  //polygon_&_slingshot
-   polygon = new Polygon(150, 150, 25, 25);
-   slingshot = new SlingShot(polygon.body, {x: 150, y: 150});
+   polygon = new Polygon(150, 125, 25, 25);
+   slingshot = new SlingShot(polygon.body, {x: 150, y: 125});
 
    Engine.run(engine)
 }
@@ -122,6 +122,7 @@ function mouseReleased(){
 
 function keyPressed(){
   if(keyCode === 32){
+     Matter.Body.setPosition(polygon.body, {x: 150, y: 125});
      slingshot.attach(polygon.body);
   }
 }
