@@ -108,6 +108,10 @@ function draw() {
    polygon.display();  
    
    drawSprites();
+	
+   textSize(25);
+   text("Drag the Block to crash the towers", 900, 50);
+   text("Press the space bar to reset the block", 900, 100);
 }
 
 function mouseDragged(){
