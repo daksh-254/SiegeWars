@@ -10,6 +10,14 @@ class Block {
     World.add(world, this.body);
     this.Visibility = 255;
   }
+
+   score(){
+     if(this.Visibility < 0 && this.Visibility > -105){
+        score = score + 20;
+        console.log(score);
+      } 
+   }
+
   display(){
    if(this.body.speed < 4){
       var pos =this.body.position;
@@ -23,7 +31,7 @@ class Block {
       push();
       this.Visiblity = this.Visiblity - 5;
       tint(255,this.Visiblity);
-      //image(this.image, this.body.position.x, this.body.position.y, 50, 50);
+      //rect(this.body, this.body.position.x, this.body.position.y, 50, 50);
       pop();
    }
   }
